@@ -6,6 +6,7 @@
     <meta name="author" content="Karla Fejfarová" />
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link rel="stylesheet" href="pres.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
@@ -18,6 +19,11 @@ class: center, middle, inverse, title-slide
 
 ---
 
+layout: true
+
+&lt;div class="my-footer"&gt;&lt;span&gt;Journal club: 7-Mar-2018, Karla&lt;/span&gt;&lt;/div&gt;
+
+---
 
 # Papers
 
@@ -36,16 +42,47 @@ Ching et al. (2018)
 [preprint doi:10.1101/142760](https://doi.org/10.1101/142760)
 
 ---
+
 # What is Deep learning?
 
----
-# Neural Networks
+.pull-left[
+Input `\(\longrightarrow\)` hidden layers `\(\longrightarrow\)` output
 
-![:scale 50%](./journal_club_201803_files/neuralnetworks.png)
+![](./journal_club_201803_files/def.png)
+
+**Input** - measured variables:
+* intensity of a pixel in an image
+* expression level of a gene
+
+**Output: **
+* labels/categories (supervised learning)
+* patterns (unsupervised learning)
+
+.small[Image from Zeiler M.D., Fergus R. (2014). Visualizing and Understanding Convolutional Networks. ECCV 2014. ECCV 2014, Part I, LNCS 8689, 818–833, [doi: 10.1007/978-3-319-10590-1_53](https://doi.org/10.1007/978-3-319-10590-1_53)]
+]
+
+.pull-right[
+![](./journal_club_201803_files/vis.png)
+
+]
+
+
+---
+background-image: url(./journal_club_201803_files/neuralnetworks.png)
+background-size: 80%
+background-position: 30% 20%
+class: bottom
 
 Image credit: [Neural network Zoo](http://www.asimovinstitute.org/neural-network-zoo/)
 
 ---
+# Applications
+
+* generate new compounds predicted to be active against a biological target
+* annotate gene expression patterns
+* prediction of DNA methylation sites
+* image segmentation
+* prediction of protein function from sequence
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({

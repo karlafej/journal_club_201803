@@ -5,11 +5,18 @@ author: "Karla Fejfarová"
 date: "2018/03/07"
 output:
   xaringan::moon_reader:
+    css: ["pres.css", "default", "default-fonts"]
     lib_dir: libs
     nature:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
+      
+---
+layout: true
+
+<div class="my-footer"><span>Journal club: 7-Mar-2018, Karla</span></div>
+
 ---
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -31,14 +38,49 @@ Ching et al. (2018)
 [preprint doi:10.1101/142760](https://doi.org/10.1101/142760)
 
 ---
+
 # What is Deep learning?
 
----
-# Neural Networks
+.pull-left[
+Input $\longrightarrow$ hidden layers $\longrightarrow$ output
 
-![:scale 50%](./journal_club_201803_files/neuralnetworks.png)
+![](./journal_club_201803_files/def.png)
+
+**Input** - measured variables:
+* intensity of a pixel in an image
+* expression level of a gene
+
+**Output: **
+* labels/categories (supervised learning)
+* patterns (unsupervised learning)
+
+.small[Image from Zeiler M.D., Fergus R. (2014). Visualizing and Understanding Convolutional Networks. ECCV 2014. ECCV 2014, Part I, LNCS 8689, 818–833, [doi: 10.1007/978-3-319-10590-1_53](https://doi.org/10.1007/978-3-319-10590-1_53)]
+]
+
+.pull-right[
+![](./journal_club_201803_files/vis.png)
+
+]
+
+---
+background-image: url(./journal_club_201803_files/neuralnetworks.png)
+background-size: 80%
+background-position: 30% 20%
+class: bottom
 
 Image credit: [Neural network Zoo](http://www.asimovinstitute.org/neural-network-zoo/)
 
 ---
+gradient descent, optimization...
 
+---
+# Applications
+
+* annotate gene expression patterns
+* prediction of DNA methylation sites
+* image segmentation
+* prediction of protein function from sequence
+* generate new compounds predicted to be active against a biological target
+
+---
+problems etc.
