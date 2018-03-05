@@ -14,5 +14,6 @@ div.my-footer span {
     position: absolute;
     left: 15px;
     bottom: 2px;
+}
 
-
+.img_small {width: 50%}
