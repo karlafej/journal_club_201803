@@ -41,6 +41,12 @@ Ching et al. (2018)
 
 # What is Deep learning?
 
+![](./journal_club_201803_files/first.png)
+
+---
+
+# What is Deep learning?
+
 .pull-left[
 Input $\longrightarrow$ hidden layers $\longrightarrow$ output
 
@@ -233,7 +239,7 @@ Image credit: [Neural network Zoo](http://www.asimovinstitute.org/neural-network
 
 * annotate gene expression patterns
 * prediction of DNA methylation sites
-* image segmentation
+* CT image segmentation
 * prediction of protein function from sequence
 * generate new compounds predicted to be active against a biological target
 * classification of skin cancer type based on photos
@@ -242,7 +248,8 @@ Image credit: [Neural network Zoo](http://www.asimovinstitute.org/neural-network
 
 # Image Segmentation
 
-Ronneberger O., Fischer P., Brox T. (2015) U-Net: Convolutional Networks for Biomedical Image Segmentation.  
+Ronneberger O., Fischer P., Brox T. (2015)  
+**U-Net: Convolutional Networks for Biomedical Image Segmentation.**  
 In: Navab N., Hornegger J., Wells W., Frangi A. (eds) Medical Image Computing and Computer-Assisted Intervention – MICCAI 2015. Lecture Notes in Computer Science, vol 9351. Springer, Cham
 
 ![](./journal_club_201803_files/unet.png)
@@ -251,9 +258,9 @@ In: Navab N., Hornegger J., Wells W., Frangi A. (eds) Medical Image Computing an
 
 # Image Segmentation
 
-Christ P. F., Elshaer M. E. A., Ettlinger F. et al. (2016) Automatic liver and lesion segmentation in ct using cascaded fully convolutional neural networks and 3D conditional random fields.  
+Christ P. F., Elshaer M. E. A., Ettlinger F. *et al.* (2016)  
+**Automatic liver and lesion segmentation in ct using cascaded fully convolutional neural networks and 3D conditional random fields.**    
 In: International conference on medical image computing and computer-assisted intervention. Springer International Publishing; 2016. p. 415–23. 4.
-
 .img_small[
 ![](./journal_club_201803_files/liver.png)
 ]
