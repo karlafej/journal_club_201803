@@ -57,6 +57,70 @@ Input `\(\longrightarrow\)` hidden layers `\(\longrightarrow\)` output
 **Output: **
 * labels/categories (supervised learning)
 * patterns (unsupervised learning)
+]
+
+
+
+---
+
+# What is Deep learning?
+
+.pull-left[
+![](journal_club_201803_files/figure-html/lm1-1.png)&lt;!-- --&gt;
+]
+
+---
+
+# What is Deep learning?
+
+.pull-left[
+![](journal_club_201803_files/figure-html/lm2-1.png)&lt;!-- --&gt;
+]
+
+---
+
+# What is Deep learning?
+
+.pull-left[
+![](journal_club_201803_files/figure-html/relu-1.png)&lt;!-- --&gt;
+]
+
+--
+
+.pull-right[
+![](./journal_club_201803_files/1neuron.png)
+
+]
+
+---
+
+# What is Deep learning?
+
+.pull-left[
+![](journal_club_201803_files/figure-html/relu2-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+![](./journal_club_201803_files/neural_net.png)
+
+]
+
+---
+
+# What is Deep learning?
+
+.pull-left[
+Input `\(\longrightarrow\)` hidden layers `\(\longrightarrow\)` output
+
+![](./journal_club_201803_files/def.png)
+
+**Input** - measured variables:
+* intensity of a pixel in an image
+* expression level of a gene
+
+**Output: **
+* labels/categories (supervised learning)
+* patterns (unsupervised learning)
 
 .small[Image from Zeiler M.D., Fergus R. (2014). Visualizing and Understanding Convolutional Networks. ECCV 2014. ECCV 2014, Part I, LNCS 8689, 818–833, [doi: 10.1007/978-3-319-10590-1_53](https://doi.org/10.1007/978-3-319-10590-1_53)]
 ]
@@ -65,7 +129,6 @@ Input `\(\longrightarrow\)` hidden layers `\(\longrightarrow\)` output
 ![](./journal_club_201803_files/vis.png)
 
 ]
-
 
 ---
 background-image: url(./journal_club_201803_files/neuralnetworks.png)
@@ -76,13 +139,47 @@ class: bottom
 Image credit: [Neural network Zoo](http://www.asimovinstitute.org/neural-network-zoo/)
 
 ---
+
+# Why deep learning?
+
+![](./journal_club_201803_files/data.png)
+.small[Image credit: [https://hackernoon.com/](https://hackernoon.com/%EF%B8%8F-big-challenge-in-deep-learning-training-data-31a88b97b282)]
+
+---
+
+# The main challenge: get the training data
+
+![](./journal_club_201803_files/dataset.gif)
+
+.small[Image credit: [https://hackernoon.com/](https://hackernoon.com/%EF%B8%8F-big-challenge-in-deep-learning-training-data-31a88b97b282)]
+---
+
+# The main challenge: get the training data
+
+.pull-left[
+- correct labels
+
+![](./journal_club_201803_files/fibrosis-labels-1.png)
+.small[Image credit: [https://lukeoakdenrayner.wordpress.com/2017/12/18/the-chestxray14-dataset-problems/](https://lukeoakdenrayner.wordpress.com/2017/12/18/the-chestxray14-dataset-problems/)]
+]
+--
+.pull-right[
+- bias in the data
+
+![](./journal_club_201803_files/bias.png)
+.small[[https://medium.com/@yonatanzunger/](https://medium.com/@yonatanzunger/asking-the-right-questions-about-ai-7ed2d9820c48)]
+
+]
+
+---
+
 # Applications
 
-* generate new compounds predicted to be active against a biological target
 * annotate gene expression patterns
 * prediction of DNA methylation sites
 * image segmentation
 * prediction of protein function from sequence
+* generate new compounds predicted to be active against a biological target
     </textarea>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({

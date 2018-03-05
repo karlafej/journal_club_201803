@@ -53,6 +53,130 @@ Input $\longrightarrow$ hidden layers $\longrightarrow$ output
 **Output: **
 * labels/categories (supervised learning)
 * patterns (unsupervised learning)
+]
+
+
+
+---
+
+# What is Deep learning?
+
+.pull-left[
+```{r lm1, warning=FALSE, echo=FALSE, message=FALSE}
+library(ggplot2)
+set.seed(42)
+n = rep(25:100,2)
+a = -40
+b = 2
+sig2 = n^1.2
+eps = rnorm(n, mean = 0, sd = sqrt(sig2))
+y = a+b*n + eps
+data = data.frame(x = n, y = y)
+mod = lm(y~n)
+ggplot(data, aes(x = x, y = y)) +
+  scale_x_continuous(limits = c(0, 100)) +
+  scale_y_continuous(limits = c(0, 180)) +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_blank()) +
+  geom_point() 
+```
+]
+
+---
+
+# What is Deep learning?
+
+.pull-left[
+```{r lm2, warning=FALSE, echo=FALSE, message=FALSE}
+ggplot(data, aes(x = x, y = y)) +
+  scale_x_continuous(limits = c(0, 100)) +
+  scale_y_continuous(limits = c(0, 180)) +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_blank()) +
+  geom_point() +
+  geom_smooth(method = 'lm')
+```
+]
+
+---
+
+# What is Deep learning?
+
+.pull-left[
+```{r relu, warning=FALSE, echo=FALSE, message=FALSE}
+x <- seq(from = 0, to = 100, by = 0.5)
+relu <- function(x)
+  sapply(x, function(y) max(0, 
+                            mod$coefficients[2]*y+mod$coefficients[1]))
+
+relufit <- data.frame(x = x, relu = relu(x)) 
+  
+ggplot(data, aes(x = x, y = y)) +
+  scale_x_continuous(limits = c(0, 100)) +
+  scale_y_continuous(limits = c(0, 180)) +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_blank()) +
+  geom_point() +
+  geom_line(data = relufit, aes(x = x, y = relu), 
+            color = "red",
+            size = 2)
+```
+]
+
+--
+
+.pull-right[
+![](./journal_club_201803_files/1neuron.png)
+
+]
+
+---
+
+# What is Deep learning?
+
+.pull-left[
+```{r relu2, warning=FALSE, echo=FALSE, message=FALSE}
+ggplot(data, aes(x = x, y = y)) +
+  scale_x_continuous(limits = c(0, 100)) +
+  scale_y_continuous(limits = c(0, 180)) +
+  theme_bw() +
+  theme(axis.title.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.text.x = element_blank()) +
+  geom_point() +
+  geom_line(data = relufit, aes(x = x, y = relu), 
+            color = "red",
+            size = 2)
+```
+]
+
+.pull-right[
+![](./journal_club_201803_files/neural_net.png)
+
+]
+
+---
+
+# What is Deep learning?
+
+.pull-left[
+Input $\longrightarrow$ hidden layers $\longrightarrow$ output
+
+![](./journal_club_201803_files/def.png)
+
+**Input** - measured variables:
+* intensity of a pixel in an image
+* expression level of a gene
+
+**Output: **
+* labels/categories (supervised learning)
+* patterns (unsupervised learning)
 
 .small[Image from Zeiler M.D., Fergus R. (2014). Visualizing and Understanding Convolutional Networks. ECCV 2014. ECCV 2014, Part I, LNCS 8689, 818–833, [doi: 10.1007/978-3-319-10590-1_53](https://doi.org/10.1007/978-3-319-10590-1_53)]
 ]
@@ -71,9 +195,40 @@ class: bottom
 Image credit: [Neural network Zoo](http://www.asimovinstitute.org/neural-network-zoo/)
 
 ---
-gradient descent, optimization...
+
+# Why deep learning?
+
+![](./journal_club_201803_files/data.png)
+.small[Image credit: [https://hackernoon.com/](https://hackernoon.com/%EF%B8%8F-big-challenge-in-deep-learning-training-data-31a88b97b282)]
 
 ---
+
+# The main challenge: get the training data
+
+![](./journal_club_201803_files/dataset.gif)
+
+.small[Image credit: [https://hackernoon.com/](https://hackernoon.com/%EF%B8%8F-big-challenge-in-deep-learning-training-data-31a88b97b282)]
+---
+
+# The main challenge: get the training data
+
+.pull-left[
+- correct labels
+
+![](./journal_club_201803_files/fibrosis-labels-1.png)
+.small[Image credit: [https://lukeoakdenrayner.wordpress.com/2017/12/18/the-chestxray14-dataset-problems/](https://lukeoakdenrayner.wordpress.com/2017/12/18/the-chestxray14-dataset-problems/)]
+]
+--
+.pull-right[
+- bias in the data
+
+![](./journal_club_201803_files/bias.png)
+.small[[https://medium.com/@yonatanzunger/](https://medium.com/@yonatanzunger/asking-the-right-questions-about-ai-7ed2d9820c48)]
+
+]
+
+---
+
 # Applications
 
 * annotate gene expression patterns
@@ -82,5 +237,3 @@ gradient descent, optimization...
 * prediction of protein function from sequence
 * generate new compounds predicted to be active against a biological target
 
----
-problems etc.
