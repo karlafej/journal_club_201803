@@ -273,3 +273,17 @@ In: International conference on medical image computing and computer-assisted in
 .img_small[
 ![](./journal_club_201803_files/liver.png)
 ]
+
+---
+
+# Metabolomics
+
+Fadhl M. Alakwaa, Kumardeep Chaudhary, and Lana X. Garmire (2018)
+**Deep Learning Accurately Predicts Estrogen Receptor Status in Breast Cancer Metabolomics Data**
+Journal of Proteome Research 2018 17 (1), 337-347
+[DOI: 10.1021/acs.jproteome.7b00595](https://doi.org/10.1021/acs.jproteome.7b00595)
+
+.img_small[
+![](./journal_club_201803_files/metab.jpeg)
+]
+
