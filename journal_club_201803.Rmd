@@ -26,7 +26,7 @@ options(htmltools.dir.version = FALSE)
 LeCun, Y., Bengio, Y. & Hinton, G.  
 **Deep learning.**  
 *Nature* 521, 436–444 (2015)  
-[doi:10.1038/nature14539](ttps://doi.org/10.1038/nature14539)
+[doi:10.1038/nature14539](https://doi.org/10.1038/nature14539)
 
 Angermueller, C., Pärnamaa, P., Parts, L. & Stegle, O.  
 **Deep learning for computational biology.**  
@@ -85,7 +85,8 @@ ggplot(data, aes(x = x, y = y)) +
   theme_bw() +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
-        axis.text.x = element_blank()) +
+        axis.text.x = element_blank(),
+        axis.line = element_line(size = 1)) +
   geom_point() 
 ```
 ]
@@ -102,7 +103,8 @@ ggplot(data, aes(x = x, y = y)) +
   theme_bw() +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
-        axis.text.x = element_blank()) +
+        axis.text.x = element_blank(),
+        axis.line = element_line(size = 1)) +
   geom_point() +
   geom_smooth(method = 'lm')
 ```
@@ -127,7 +129,8 @@ ggplot(data, aes(x = x, y = y)) +
   theme_bw() +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
-        axis.text.x = element_blank()) +
+        axis.text.x = element_blank(),
+        axis.line = element_line(size = 1)) +
   geom_point() +
   geom_line(data = relufit, aes(x = x, y = relu), 
             color = "red",
@@ -154,7 +157,8 @@ ggplot(data, aes(x = x, y = y)) +
   theme_bw() +
   theme(axis.title.x = element_blank(),
         axis.title.y = element_blank(),
-        axis.text.x = element_blank()) +
+        axis.text.x = element_blank(),
+        axis.line = element_line(size = 1)) +
   geom_point() +
   geom_line(data = relufit, aes(x = x, y = relu), 
             color = "red",
@@ -192,7 +196,7 @@ Input $\longrightarrow$ hidden layers $\longrightarrow$ output
 * labels/categories (supervised learning)
 * patterns (unsupervised learning)
 
-.small[Image from Zeiler M.D., Fergus R. (2014). Visualizing and Understanding Convolutional Networks. ECCV 2014. ECCV 2014, Part I, LNCS 8689, 818–833, [doi: 10.1007/978-3-319-10590-1_53](https://doi.org/10.1007/978-3-319-10590-1_53)]
+.small[Image from Zeiler & Fergus (2014). [doi: 10.1007/978-3-319-10590-1_53](https://doi.org/10.1007/978-3-319-10590-1_53)]
 ]
 
 .pull-right[
@@ -237,13 +241,13 @@ Input $\longrightarrow$ hidden layers $\longrightarrow$ output
 
 # Applications
 
-*  find low dimensional representation of cancer gene expression data, dicovery of clinically relevant tumour subtypes  
+*  find low dimensional representation of cancer gene expression data, discovery of clinically relevant tumour subtypes  
 .medium[(Young *et al.* (2017) [doi: 10.1186/s12859-017-1798-2](https://doi.org/10.1186/s12859-017-1798-2) )]
 * prediction of DNA methylation sites  
 .medium[(Angermueller *et al.* (2017) [doi: 10.1186/s13059-017-1189-z](https://doi.org/10.1186/s13059-017-1189-z))]
 * prediction of functional output of DNA sequences  
 .medium[(Kelley *et al.* (2016) [doi: 10.1101/gr.200535.115](https://doi.org/10.1101/gr.200535.115))]
-* CT image segmentation (e.g. select liver area in CT images)  
+* image segmentation (e.g. select liver area in CT images)  
 .medium[(Ronneberger *et al.* (2015) [doi: 10.1007/978-3-319-24574-4_28](https://doi.org/10.1007/978-3-319-24574-4_28), ...)]
 * prediction of protein function from sequence  
 .medium[(Kulmanov *et al.* (2018) [doi: 10.1093/bioinformatics/btx624](https://doi.org/10.1093/bioinformatics/btx624))]
@@ -259,7 +263,8 @@ Input $\longrightarrow$ hidden layers $\longrightarrow$ output
 
 Ronneberger O., Fischer P., Brox T. (2015)  
 **U-Net: Convolutional Networks for Biomedical Image Segmentation.**  
-In: Navab N., Hornegger J., Wells W., Frangi A. (eds) Medical Image Computing and Computer-Assisted Intervention – MICCAI 2015. Lecture Notes in Computer Science, vol 9351. Springer, Cham
+In: Navab N., Hornegger J., Wells W., Frangi A. (eds) Medical Image Computing and Computer-Assisted Intervention – MICCAI 2015. Lecture Notes in Computer Science, vol 9351. Springer, Cham  
+(doi: [10.1007/978-3-319-24574-4_28](https://doi.org/10.1007/978-3-319-24574-4_28))
 
 ![](./journal_club_201803_files/unet.png)
 
@@ -270,6 +275,7 @@ In: Navab N., Hornegger J., Wells W., Frangi A. (eds) Medical Image Computing an
 Christ P. F., Elshaer M. E. A., Ettlinger F. *et al.* (2016)  
 **Automatic liver and lesion segmentation in ct using cascaded fully convolutional neural networks and 3D conditional random fields.**    
 In: International conference on medical image computing and computer-assisted intervention. Springer International Publishing; 2016. p. 415–23. 4.
+(doi: [10.1007/978-3-319-46723-8_48](https://doi.org/10.1007/978-3-319-46723-8_48))
 .img_small[
 ![](./journal_club_201803_files/liver.png)
 ]
@@ -283,14 +289,27 @@ Fadhl M. Alakwaa, Kumardeep Chaudhary, and Lana X. Garmire (2018)
 Journal of Proteome Research 2018 17 (1), 337-347
 [DOI: 10.1021/acs.jproteome.7b00595](https://doi.org/10.1021/acs.jproteome.7b00595)
 
-.img_small[
+.pull-left[
 ![](./journal_club_201803_files/metab.jpeg)
+]
+
+.pull-right[
+data: 
+* 271 breast cancer samples
+* 162 metabolites with known structure (GC-TOFMS)
+
+![](./journal_club_201803_files/metab2.jpg)
 ]
 
 ---
 
 .pull-left[
 ## Take home message
+
+### The most important thing in deep learning is the **data** used to train the neural network.
+
+![](./journal_club_201803_files/dataend.png)
+.small[Image from [hackernoon.com](https://hackernoon.com/%EF%B8%8F-big-challenge-in-deep-learning-training-data-31a88b97b282)]
 ]
 
 --
