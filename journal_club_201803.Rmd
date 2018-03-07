@@ -61,8 +61,10 @@ Input $\longrightarrow$ hidden layers $\longrightarrow$ output
 * patterns (unsupervised learning)
 ]
 
-
-
+.pull-right[
+Neural networks
+![](./journal_club_201803_files/dnn.png)
+]
 ---
 
 # What is Deep learning?
@@ -90,6 +92,7 @@ ggplot(data, aes(x = x, y = y)) +
   geom_point() 
 ```
 ]
+
 
 ---
 
